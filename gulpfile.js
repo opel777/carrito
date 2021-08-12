@@ -11,7 +11,7 @@ const sass = gulpSass(nodeSass);
 function css() {
     return gulp
     .src('scss/app.scss')
-    .src('css/app.css')
+  
     .pipe(autoprefixer({
         overrideBrowserslist : ['last 2 versins'],
         cascade : false,

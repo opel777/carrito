@@ -22,6 +22,9 @@ body {
 .oculto{
     display: none;
 }
+.centrado{
+    text-align: center;
+}
 .header{
 
     display: flex;
@@ -140,5 +143,29 @@ body {
             }
         }
 
+    }
+}
+.cursos{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content:space-between;
+
+    .curso {
+        .imagen-curso {
+            width:  100%;
+        }
+        flex: 0 1 calc(50% - 1rem);
+        border: 1px solid darken( $gris, 10);
+        margin-bottom: 1rem;
+
+        @include tablet(){
+            flex: 0 1 calc(33% - 1rem);
+        }
+        @include desktop(){
+            flex: 0 calc(25% - 1rem);
+        }
+.info-curso {
+    padding: 1rem;
+}
     }
 }

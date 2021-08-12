@@ -23,6 +23,10 @@ body {
   display: none;
 }
 
+.centrado {
+  text-align: center;
+}
+
 .header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -181,4 +185,42 @@ body {
   background-image: url("../img/icono3.png");
   background-repeat: no-repeat;
   background-position: center center;
+}
+
+.cursos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.cursos .curso {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 calc(50% - 1rem);
+          flex: 0 1 calc(50% - 1rem);
+  border: 1px solid #d9d9d9;
+  margin-bottom: 1rem;
+}
+.cursos .curso .imagen-curso {
+  width: 100%;
+}
+@media only screen and (min-width: 768px) {
+  .cursos .curso {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 calc(33% - 1rem);
+            flex: 0 1 calc(33% - 1rem);
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .cursos .curso {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 calc(25% - 1rem);
+            flex: 0 calc(25% - 1rem);
+  }
+}
+.cursos .curso .info-curso {
+  padding: 1rem;
 }
