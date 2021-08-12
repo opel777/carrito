@@ -1,5 +1,5 @@
-@mixin boton() {
-    background-color: $principal;
+@mixin boton($color) {
+    background-color: $color;
     padding:.5rem 1rem;
     margin-top:1rem;
     display: block;
@@ -8,4 +8,36 @@
     text-decoration: none;
     border-radius: 3px;
     
+}
+
+@mixin box-sizing($box-model){
+    box-sizing: $box-model;
+}
+
+@mixin background-imagen($imagen){
+    background-image: url($imagen);
+    background-repeat: no-repeat;
+    background-position:center center;
+}
+@mixin gradiente($color1, $color2) {
+    background:linear-gradient(to right, $color1 0%, $color2 100%)
+}
+
+
+//media queries
+
+@mixin telefono{
+    @media only screen and (min-width: #{$telefono}){
+        @content;
+    }
+}
+@mixin tablet{
+    @media only screen and (min-width: #{$tablet}){
+        @content;
+    }
+}
+@mixin desktop{
+    @media only screen and (min-width: #{$desktop}){
+        @content;
+    }
 }

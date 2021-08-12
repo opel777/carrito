@@ -1,6 +1,20 @@
 @import 'variables';
 @import 'mixins';
 
+
+
+html {
+    @include box-sizing (border-box);
+    
+}
+*,
+*:after,
+*:before {
+    @include box-sizing(inherit);
+}
+body {
+    font-family:fuente_Principal;
+}
 .contenedor {
     max-width: 1100px;
     margin: 0 auto;
@@ -9,6 +23,7 @@
     display: none;
 }
 .header{
+
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -26,13 +41,104 @@
         right: 0;
         background-color: $gris;
         padding: 1rem;
-        max-width: 400px;
+        max-width:400px;
 
         img {
             max-width: 150px;
         }
         .boton{
-           @include boton();
+           @include boton($principal);
         }
+    }
+}
+.hero {
+    min-height: 24rem;
+    background-size:cover;
+    color:$blanco;
+    display:flex;
+    align-items: center;
+    @include background-imagen('../img/hero.jpg');
+
+    
+    .contenido-hero{
+        flex:1;
+
+        h2 {
+            font-weight: 400;
+            font-size: 2.4rem;
+        }
+        
+        p {
+            font-size: 1.2rem;
+        }
+        form {
+            position: relative;
+            
+
+           @include tablet(){
+            width: 40%;
+           }
+            input[type="submit"]{
+                position: absolute;
+                right:0;
+                top:0;
+                @include background-imagen('../img/lupa.png');
+                width:3rem;
+                height:2.9rem;
+                display:block;
+                text-indent:-9999rem;
+                border:none;
+                cursor:pointer;
+                
+                
+            }
+
+            input[type="text"]{
+                width:100%;
+                height:3rem;
+            }
+        }
+    }
+
+}
+.barra{
+    min-height: 6rem;
+    padding: 1rem;
+    @include gradiente($secundario, $terciario);
+    color:$blanco;
+    display:flex;
+    align-items:center;
+
+    .iconos{
+        display: flex;
+        flex-direction: column;
+        flex:1;
+        @include desktop() {
+            flex-direction:row;
+        }
+        .icono {
+            flex: 1;
+            background-position: 5% center!important;
+            @include tablet {
+            background-position: 20% center!important;
+            }
+            @include desktop {
+                background-position: left center!important;
+                }
+
+            background-size:2.4rem;
+            text-align: center;
+
+            &.icono1 {
+                @include background-imagen('../img/icono1.png')
+            }
+            &.icono2 {
+                @include background-imagen('../img/icono2.png')
+            }
+            &.icono3 {
+                @include background-imagen('../img/icono3.png')
+            }
+        }
+
     }
 }
