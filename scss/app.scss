@@ -78,7 +78,7 @@ body {
             position: relative;
             
 
-           @include tablet(){
+        @include tablet(){
             width: 40%;
            }
             input[type="submit"]{
@@ -122,12 +122,13 @@ body {
         .icono {
             flex: 1;
             background-position: 5% center!important;
+
             @include tablet {
-            background-position: 20% center!important;
+                background-position: 20% center!important;
             }
             @include desktop {
                 background-position: left center!important;
-                }
+            }
 
             background-size:2.4rem;
             text-align: center;
@@ -154,14 +155,14 @@ body {
         .imagen-curso {
             width:  100%;
         }
-        flex: 0 1 calc(50% - 1rem);
-        border: 1px solid darken( $gris, 10);
-        margin-bottom: 1rem;
+    flex: 0 1 calc(50% - 1rem);
+    border: 1px solid darken( $gris, 10);
+    margin-bottom: 1rem;
 
-        @include tablet(){
+     @include tablet(){
             flex: 0 1 calc(33% - 1rem);
         }
-        @include desktop(){
+     @include desktop(){
             flex: 0 calc(25% - 1rem);
         }
 .info-curso {
