@@ -4,7 +4,8 @@
   "description": "Proyecto con SASS, Gulp y Flexbox",
   "main": "gulpfile.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "scss": "node-sass scss/app.scss css/app.css",
   },
   "author": "Gustavo Villegas",
   "license": "ISC",
@@ -17,5 +18,6 @@
   "browserslist": [
     "> 1%",
     "last 2 versions"
-  ]
+  ],
+  "scss": "node-sass --watch scss -o css"
 }
